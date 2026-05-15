@@ -4,7 +4,7 @@ const searchKeyword = 'Inception';
 
 async function getMovies() {
     try {
-        const response = await fetch(`https://www.omdbapi.com/?s=${searchKeyword}&apikey=6761005f`);
+        const response = await fetch(`https://www.omdbapi.com/?s=${searchKeyword}&apikey=67519432`);
         const data = await response.json();
 
         if (data.Search) {
