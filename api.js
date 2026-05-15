@@ -8,7 +8,7 @@ async function getMovies() {
         const data = await response.json();
 
         if (data.Search) {
-            movieContainer.innerHTML = data.Search.map(movie => 
+            movieContainer.innerHTML = data.Search.map(movie =>`
 
     <div class="col-md-4 mb-4">
     <div class="card movie-card h-100 shadow-sm">
