@@ -10,25 +10,24 @@ async function getMovies(query) {
 
         if (data.Search) {
             movieContainer.innerHTML = data.Search.map(movie => `
-                <div class="col-md-4 mb-4">
-                    <div class="card movie-card h-100 shadow-sm">
-                        <img src="${movie.Poster !== 'N/A' ? movie.Poster : 'https://via.placeholder.com/300x450?text=Afis+Yok'}" 
-                             class="card-img-top" 
-                             alt="${movie.Title}" 
-                             style="height: 400px; object-fit: cover;">
-                        <div class="card-body d-flex flex-column justify-content-between">
-                            <div>
-                                <h5 class="card-title text-primary fw-bold">${movie.Title}</h5>
-                                <p class="card-text text-muted mb-1">Yýl: ${movie.Year}</p>
-                                <p class="small text-secondary">IMDb ID: ${movie.imdbID}</p> 
-                            </div>
-                            <span class="badge bg-info align-self-start">Sinema</span>
-                        </div>
-                    </div>
+    <div class="col-md-4 mb-4">
+        <div class="card movie-card h-100 shadow-sm border-0" style="border-radius: 15px; overflow: hidden;">
+            <img src="${movie.Poster !== 'N/A' ? movie.Poster : 'https://via.placeholder.com/300x450?text=Afis+Yok'}" 
+                 class="card-img-top" 
+                 style="height: 400px; object-fit: cover;">
+            <div class="card-body d-flex flex-column justify-content-between text-center bg-white">
+                <div>
+                    <h5 class="card-title text-primary fw-bold mb-1">${movie.Title}</h5>
+                    <p class="card-text text-muted small mb-1">Yil: ${movie.Year}</p> 
+                    <p class="small fw-bold text-secondary mb-2">IMDb No: ${movie.imdbID}</p>
                 </div>
-            `).join('');
+                <span class="badge bg-info align-self-center mt-2">Sinema</span>
+            </div>
+        </div>
+    </div>
+`).join('');
         } else {
-            movieContainer.innerHTML = '<p class="text-center">Film bulunamadý aþkým, baþka bir þey yaz.</p>';
+            movieContainer.innerHTML = '<p class="text-center">Film bulunamadý.</p>';
         }
     } catch (error) {
         console.error("Hata:", error);

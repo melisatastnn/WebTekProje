@@ -53,3 +53,43 @@ body {
         transform: scale(1.05);
         box-shadow: 0 10px 20px rgba(0,0,0,0.2);
     }
+
+
+.contact-info-card, .form-container {
+    background: white;
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    height: 100%;
+    margin-bottom: 20px;
+}
+
+
+.btn-custom-js {
+    background-color: #f06292;
+    color: white;
+    border: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+
+.btn-custom-vue {
+    background-color: #f06292;
+    color: white;
+    border: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+    .btn-custom-js:hover, .btn-custom-vue:hover {
+        opacity: 0.8;
+        color: white;
+        transform: translateY(-2px);
+    }
+
+
+    .form-label {
+        color: #ad1457;
+        margin-top: 10px;
+}
