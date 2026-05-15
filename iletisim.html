@@ -23,7 +23,7 @@
                     <li class="nav-item"><a class="nav-link" href="sehrim.html">Şehrim</a></li>
                     <li class="nav-item"><a class="nav-link" href="ilgialanlarim.html">İlgi Alanlarım</a></li>
                     <li class="nav-item"><a class="nav-link active" href="iletisim.html">İletişim</a></li>
-                    <li class="nav-item"><a class="nav-link btn btn-outline-primary ms-lg-2" href="login.php">Login</a></li>
+                    <li class="nav-item"><a class="nav-link btn btn-outline-primary ms-lg-2" href="login.html">Login</a></li>
                 </ul>
             </div>
         </div>
@@ -171,15 +171,23 @@
         }
         },
         methods: {
-        vueDenetle() {
+    vueDenetle() {
         if (!this.form.adSoyad || !this.form.email || !this.form.tel || !this.form.konu || !this.form.mesaj || !this.form.cinsiyet) {
-        alert("Lütfen tüm alanları doldurun! (Vue.js)");
+            alert("Lütfen tüm alanları doldurun! (Vue.js)");
         } else {
-        alert("Vue.js Denetimi Başarılı! Veriler gönderiliyor.");
-        document.getElementById('iletisimFormu').submit();
+            let alertMesajı = "Form Bilgileri:\n" +
+                              "Ad Soyad: " + this.form.adSoyad + "\n" +
+                              "E-posta: " + this.form.email + "\n" +
+                              "Telefon: " + this.form.tel + "\n" +
+                              "Cinsiyet: " + this.form.cinsiyet + "\n" +
+                              "Konu: " + this.form.konu + "\n" +
+                              "Mesaj: " + this.form.mesaj;
+
+            alert(alertMesajı);
+            document.getElementById('iletisimFormu').submit();
         }
-        }
-        }
+    }
+}
         }).mount('#app')
     </script>
       
