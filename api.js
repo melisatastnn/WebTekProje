@@ -3,7 +3,7 @@ const searchInput = document.getElementById('search-input');
 const searchButton = document.getElementById('search-button'); 
 const apiKey = '67519432'; 
 
-async function getMovies(query = 'Inception') {
+async function getMovies(query) {
     try {
         const response = await fetch(`https://www.omdbapi.com/?s=${query}&apikey=${apiKey}`);
         const data = await response.json();
@@ -31,7 +31,7 @@ async function getMovies(query = 'Inception') {
             movieContainer.innerHTML = '<p class="text-center">Film bulunamadý aþkým, baþka bir þey yaz.</p>';
         }
     } catch (error) {
-        console.error("API hatasý:", error);
+        console.error("Hata:", error);
     }
 }
 
@@ -50,5 +50,3 @@ searchInput.addEventListener('keypress', (e) => {
         }
     }
 });
-
-getMovies();
