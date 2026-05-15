@@ -1,5 +1,5 @@
 const movieContainer = document.getElementById('movie-list');
-const apiKey = '6761005f';
+const apiKey = '67519432';
 const searchKeyword = 'Inception';
 
 async function getMovies() {
